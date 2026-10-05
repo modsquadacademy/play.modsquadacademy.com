@@ -6,17 +6,15 @@
     <title>Play & Share | Mod Squad Academy</title>
     <meta name="description" content="Play, share, and test projects created with Scratch, TurboWarp, PenguinMod, and Gandi IDE!">
     
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="https://modsquadacademy.com/images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
     
-    <!-- Using your existing global stylesheet and components -->
-    <link rel="stylesheet" href="/style.css">
-    <script src="/components.js" defer></script>
+    <!-- Pull styles directly from your live main domain so it matches instantly -->
+    <link rel="stylesheet" href="https://modsquadacademy.com/style.css">
 
     <style>
-        /* Specific layout rules for the Play Arcade page */
         .arcade-section {
             padding: 60px 8%;
             max-width: 1300px;
@@ -87,21 +85,41 @@
 </head>
 <body>
     
-    <!-- Shared Header Header -->
-    <shared-header></shared-header>
+    <!-- Manual Navigation Header matching your component layout -->
+    <div class="sticky-nav-container">
+        <header style="background-color: #ffffff; display: flex; justify-content: flex-start; align-items: center; padding: 45px 0; width: 100%;">
+            <div class="logo" style="margin-left: 10%; margin-right: 50px; display: flex; align-items: center;">
+                <a href="https://modsquadacademy.com">
+                    <img src="https://raw.githubusercontent.com/modsquadacademy/play.modsquadacademy.com/main/Mod.%20Squad%20Logo%20Words%20Only.png" alt="MOD Logo" style="height: 38px; width: auto; display: block;">
+                </a>
+            </div>
+            <nav>
+                <ul style="display: flex; list-style: none; gap: 22px; align-items: center;">
+                    <li><a href="https://modsquadacademy.com" style="text-decoration: none; color: #777; font-size: 15px;">Home</a></li>
+                    <li><a href="https://modsquadacademy.com/create" style="text-decoration: none; color: #777; font-size: 15px;">Create</a></li>
+                    <li><a href="https://modsquadacademy.com/explore" style="text-decoration: none; color: #777; font-size: 15px;">Explore</a></li>
+                    <li><a href="https://modsquadacademy.com/featured" style="text-decoration: none; color: #777; font-size: 15px;">Featured</a></li>
+                    <li><a href="https://modsquadacademy.com/library" style="text-decoration: none; color: #777; font-size: 15px;">Asset Library</a></li>
+                    <li><a href="https://modsquadacademy.com/about" style="text-decoration: none; color: #777; font-size: 15px;">About</a></li>
+                    <li><a href="https://modsquadacademy.com/contact" style="text-decoration: none; color: #777; font-size: 15px;">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="construction-ribbon" style="background: rgba(255, 230, 0, 0.25); color: #ffe600; text-align: center; padding: 12px 20px; font-weight: 600; font-size: 14px; text-transform: uppercase;">
+            ⚠️ PLAY SUBDOMAIN &bull; UPLOAD & SHARE SCRATCH & MOD PROJECTS ⚠️
+        </div>
+    </div>
 
     <main>
-        <!-- Matching Main Site Hero -->
-        <section class="display-section">
+        <section class="display-section" style="background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.15)), url('https://modsquadacademy.com/images/space-bg.jpg') no-repeat center center/cover;">
             <div class="display-content">
-                <img src="images/favicon.png" alt="Mod Squad Icon" class="hero-favicon">
+                <img src="https://modsquadacademy.com/images/favicon.png" alt="Mod Squad Icon" class="hero-favicon">
                 <h1 class="display-title">Play & Share</h1>
                 <h2 class="display-subtitle">EXPLORE CREATIONS FROM OUR COMMUNITY</h2>
                 <a href="#arcade" class="btn-glass">Browse Games</a>
             </div>
         </section>
 
-        <!-- Arcade Project Display Grid -->
         <section class="arcade-section" id="arcade">
             <div class="section-header">
                 <p class="section-subtitle">Community Arcade</p>
@@ -109,11 +127,10 @@
             </div>
 
             <div class="arcade-grid">
-                <!-- Example Card Placeholder -->
                 <div class="project-card">
-                    <img src="images/favicon.png" alt="Project Thumbnail" class="project-thumb" style="object-fit: contain; padding: 20px;">
+                    <img src="https://uploads.scratch.mit.edu/projects/thumbnails/414716080.png" alt="Thumbnail" class="project-thumb">
                     <div class="project-info">
-                        <h3 class="project-title">Sample Project Title</h3>
+                        <h3 class="project-title">Sample Modded Game</h3>
                         <p class="project-author">by ModSquadAcademy</p>
                         <span class="mod-badge">TurboWarp</span>
                     </div>
@@ -122,8 +139,9 @@
         </section>
     </main>
 
-    <!-- Shared Footer Footer -->
-    <shared-footer></shared-footer>
+    <footer style="background-color: #050508; border-top: 1px solid rgba(255,255,255,0.05); padding: 40px 8%; text-align: center; color: #888; font-size: 13px;">
+        <p>Mod Squad Academy &bull; Play Subdomain</p>
+    </footer>
 
 </body>
 </html>

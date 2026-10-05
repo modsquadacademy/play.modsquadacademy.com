@@ -9,7 +9,7 @@ class SharedHeader extends HTMLElement {
                 <header>
                     <div class="logo">
                         <a href="index.html">
-                            <img src="images/logo.png" alt="MOD Logo" style="max-height: 38px; width: auto; display: block;">
+                            <img src="images/logo.png" alt="MOD Logo" style="max-height: 38px; width: auto; display: block; filter: invert(1) brightness(2);">
                         </a>
                     </div>
 
@@ -24,14 +24,16 @@ class SharedHeader extends HTMLElement {
                     <nav>
                         <ul>
                             <li><a href="index.html" class="nav-home">Home</a></li>
+                            <li><a href="https://modsquadacademy.com/create" target="_blank">Create</a></li>
+                            <li><a href="">Explore</a></li>
+                            <li><a href="">Featured</a></li>
+                            <li><a href="">Play from Scratch</a></li>
                             <li><a href="https://modsquadacademy.com" target="_blank">Main Site</a></li>
                         </ul>
                     </nav>
                 </header>
 
-                <div class="construction-ribbon">
-                    🎮 Play Subdomain - Mod Squad Academy 🎮
-                </div>
+                
             </div>
         `;
     }

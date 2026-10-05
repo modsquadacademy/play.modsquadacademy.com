@@ -28,7 +28,7 @@ shared-header {
 }
 
 header {
-    background-color: #ffffff;
+    background-color: #0099ff; 
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -64,14 +64,14 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: #777777;
+    color: #ffffff;
     font-weight: 400;
     font-size: 15px;
     transition: color 0.2s ease;
 }
 
 nav ul li a:hover, nav ul li a.active {
-    color: #0099ff;
+    color: #00385e;
 }
 
 #menu-toggle {

@@ -1,6 +1,6 @@
-/* ==========================================================================
+/* ==========================================
    Mod Squad Academy - Shared Component Engine
-   ========================================================================== */
+   ========================================== */
 
 // 1. Unified Navigation Header Component
 class SharedHeader extends HTMLElement {
@@ -10,7 +10,7 @@ class SharedHeader extends HTMLElement {
                 <header>
                 
                     <div class="logo">
-                        <a href="https://modsquadacademy.com/">
+                        <a href="index.html">
                             <img src="images/logo.png" alt="MOD Logo">
                         </a>
                     </div>
@@ -25,19 +25,19 @@ class SharedHeader extends HTMLElement {
 
                     <nav>
                         <ul>
-                            <li><a href="https://modsquadacademy.com/" class="nav-home">Home</a></li>
-                            <li><a href="https://modsquadacademy.com/create" class="nav-create">Create</a></li>
-                            <li><a href="https://modsquadacademy.com/explore" class="nav-explore">Explore</a></li>
-                            <li><a href="https://modsquadacademy.com/featured" class="nav-featured">Featured</a></li>
-                            <li><a href="https://modsquadacademy.com/library" class="nav-library">Asset Library</a></li>
-                            <li><a href="https://modsquadacademy.com/about" class="nav-about">About</a></li>
-                            <li><a href="https://modsquadacademy.com/contact" class="nav-contact">Contact</a></li>
+                            <li><a href="index.html" class="nav-home">Home</a></li>
+                            <li><a href="create.html" class="nav-create">Create</a></li>
+                            <li><a href="explore.html" class="nav-explore">Explore</a></li>
+                            <li><a href="featured.html" class="nav-featured">Featured</a></li>
+                            <li><a href="library.html" class="nav-library">Asset Library</a></li>
+                            <li><a href="about.html" class="nav-about">About</a></li>
+                            <li><a href="contact.html" class="nav-contact">Contact</a></li>
                         </ul>
                     </nav>
                 </header>
 
                 <div class="construction-ribbon">
-                    ⚠️ SUBDOMAIN UNDER CONSTRUCTION ⚠️
+                    ⚠️ This Site Is Under Construction - We're moving from modsquadacademy.weebly.com ⚠️
                 </div>
             </div>
         `;
@@ -63,7 +63,7 @@ class SharedFooter extends HTMLElement {
                 <div class="footer-container">
                     <div class="footer-brand">
                         <div class="footer-logo">
-                            <img src="images/logo.png" alt="MOD SQUAD ACADEMY Logo">
+                            <img src="/images/logo.png" alt="MOD SQUAD ACADEMY Logo">
                         </div>
                         <p class="footer-tagline">Coding to never seen before new worlds.</p>
                     </div>
@@ -72,21 +72,21 @@ class SharedFooter extends HTMLElement {
                         <div class="footer-column">
                             <h4>Explore</h4>
                             <ul>
-                                <li><a href="https://modsquadacademy.com/">Home</a></li>
-                                <li><a href="https://modsquadacademy.com/create">Create</a></li>
-                                <li><a href="https://modsquadacademy.com/explore">Explore</a></li>
-                                <li><a href="https://modsquadacademy.com/featured">Featured</a></li>
+                                <li><a href="/index.html">Home</a></li>
+                                <li><a href="/create">Create</a></li>
+                                <li><a href="#">Explore</a></li>
+                                <li><a href="#">Featured</a></li>
                             </ul>
                         </div>
                         
                         <div class="footer-column">
                             <h4>Resources</h4>
                             <ul>
-                                <li><a href="https://modsquadacademy.com/library">Asset Library</a></li>
+                                <li><a href="#">Asset Library</a></li>
                                 <li><a href="https://scratch.mit.edu/users/ModSquadAcademy/" target="_blank" rel="noopener noreferrer">Scratch Profile</a></li>
-                                <li><a href="https://modsquadacademy.com/about">About Us</a></li>
-                                <li><a href="https://modsquadacademy.com/policies">Policies</a></li>
-                                <li><a href="https://modsquadacademy.com/contact">Contact</a></li>
+                                <li><a href="/about">About Us</a></li>
+                                <li><a href="/policies">Policies</a></li>
+                                <li><a href="/contact">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -94,7 +94,7 @@ class SharedFooter extends HTMLElement {
                 
                 <div class="footer-bottom">
                     <p>Mod Squad Academy &bull; Empowering Next-Gen Creators</p>
-                    <p class="footer-credit">© 2026 Mod. Squad Academy</p>
+                    <p class="footer-credit">&copy; 2026 Mod. Squad Academy</p>
                 </div>
             </footer>
         `;

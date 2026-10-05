@@ -3,88 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Play & Share | Mod Squad Academy</title>
-    <meta name="description" content="Play, share, and test projects created with Scratch, TurboWarp, PenguinMod, and Gandi IDE!">
+    <title>Mod Squad Academy</title>
+    <meta name="description" content="Welcome to the Mod. Squad Academy! Learn and enquire about our 2026 courses, discover awesome mods, or simply play some of our tutorial games!">
     
-    <link rel="icon" type="image/png" href="https://modsquadacademy.com/images/favicon.png">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script src="components.js" defer></script>
-
     <style>
-        /* Base Reset */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; color: #ffffff; background-color: #0b0b12; overflow-x: hidden; }
-
+        .looking-for-section { padding: 60px 20px; text-align: center; }
         
-        /* Page Layout Styles */
-        .display-section {
-            position: relative;
-            height: 90vh;
-            min-height: 650px;
-            background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.15)), url('https://modsquadacademy.com/images/space-bg.jpg') no-repeat center center/cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
+        .carousel-outer { 
+            position: relative; max-width: 1200px; margin: 0 auto; overflow: hidden;
+            mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
         }
-        .display-content { max-width: 1100px; width: 100%; display: flex; flex-direction: column; align-items: center; text-align: center; }
-        .hero-favicon { width: 78px; height: 75px; margin-bottom: 5px; position: relative; top: -50px; }
-        .display-title { font-size: 4.2rem; font-weight: 800; text-transform: uppercase; margin-bottom: 20px; }
-        .display-subtitle { font-size: 1.5rem; color: #dddddd; margin-bottom: 45px; }
 
-        .arcade-section { padding: 60px 8%; max-width: 1300px; margin: 0 auto; }
-        .section-subtitle { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 3px; color: #4D97FF; margin-bottom: 10px; }
-        .section-main-title { font-size: 3rem; font-weight: 800; text-transform: uppercase; }
+        #looking-carousel { 
+            display: flex; gap: 20px; 
+            will-change: transform;
+            padding: 20px 0;
+            justify-content: center;
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-        .arcade-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; margin-top: 40px; }
-        .project-card { background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; overflow: hidden; text-decoration: none; color: #fff; display: flex; flex-direction: column; }
-        .project-thumb { width: 100%; height: 180px; background: #14141c; object-fit: cover; }
-        .project-info { padding: 20px; }
-        .project-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
-        .project-author { font-size: 0.85rem; color: #888888; }
-        .mod-badge { display: inline-block; margin-top: 12px; padding: 4px 10px; background: rgba(77, 151, 255, 0.15); border: 1px solid rgba(77, 151, 255, 0.3); border-radius: 4px; font-size: 0.75rem; color: #4D97FF; font-weight: 600; text-transform: uppercase; }
+        .looking-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px; padding: 25px; 
+            width: 85vw; max-width: 450px;
+            flex-shrink: 0;
+            display: flex; align-items: center; gap: 15px; text-decoration: none;
+            transition: all 0.3s ease;
+        }
 
-        .btn-glass { background: rgba(77, 151, 255, 0.3); color: #ffffff; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 16px 36px; border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 6px; text-decoration: none; display: inline-block; }
+        .looking-card.center-active {
+            box-shadow: 0 0 40px rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.15);
+            transform: scale(1.05);
+        }
+
+        .looking-card img { width: 45px; height: 45px; }
+        .looking-text { text-align: left; }
+        .looking-text h3 { color: #fff; margin: 0; font-size: 1.2rem; }
+        .looking-text p { margin: 5px 0 0; font-weight: 600; font-size: 0.9rem; text-decoration: underline; }
     </style>
 </head>
 <body>
     
-    <!-- Use the shared web component -->
     <shared-header></shared-header>
 
     <main>
         <section class="display-section">
             <div class="display-content">
-                <img src="https://modsquadacademy.com/images/favicon.png" alt="Mod Squad Icon" class="hero-favicon">
-                <h1 class="display-title">Play & Share</h1>
-                <h2 class="display-subtitle">EXPLORE CREATIONS FROM OUR COMMUNITY</h2>
-                <a href="#arcade" class="btn-glass">Browse Games</a>
-            </div>
-        </section>
-
-        <section class="arcade-section" id="arcade">
-            <div class="section-header">
-                <p class="section-subtitle">Community Arcade</p>
-                <h2 class="section-main-title">Featured Projects</h2>
-            </div>
-
-            <div class="arcade-grid">
-                <div class="project-card">
-                    <img src="https://uploads.scratch.mit.edu/projects/thumbnails/414716080.png" alt="Thumbnail" class="project-thumb">
-                    <div class="project-info">
-                        <h3 class="project-title">Sample Modded Game</h3>
-                        <p class="project-author">by ModSquadAcademy</p>
-                        <span class="mod-badge">TurboWarp</span>
-                    </div>
-                </div>
+                <img src="images/favicon.png" alt="Mod Squad Icon" class="hero-favicon">
+                <h1 class="display-title">Code to new worlds</h1>
+                <h2 class="display-subtitle">NEVER SEEN BEFORE</h2>
+                <a href="https://modsquadacademy.com/contact" class="btn-glass">Enquire Now!</a>
             </div>
         </section>
     </main>
 
     <shared-footer></shared-footer>
 
+    <script>
+        const carousel = document.getElementById('looking-carousel');
+        function updateGlow() {
+            const cards = Array.from(document.querySelectorAll('.looking-card'));
+            cards.forEach(c => c.classList.remove('center-active'));
+            if (cards.length >= 2) cards[1].classList.add('center-active');
+        }
+        function rotateCarousel() {
+            const cards = Array.from(document.querySelectorAll('.looking-card'));
+            const cardWidth = cards[0].offsetWidth;
+            const gap = 20;
+            carousel.style.transition = 'transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+            carousel.style.transform = `translateX(-${cardWidth + gap}px)`;
+            setTimeout(() => {
+                carousel.style.transition = 'none';
+                carousel.appendChild(carousel.firstElementChild);
+                carousel.style.transform = 'translateX(0)';
+                updateGlow();
+            }, 800);
+        }
+        if (carousel) {
+            setInterval(rotateCarousel, 4000);
+            updateGlow();
+        }
+    </script>
 </body>
 </html>
+[cite: 4]

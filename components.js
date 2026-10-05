@@ -37,7 +37,7 @@ class SharedHeader extends HTMLElement {
                 </header>
 
                 <div class="construction-ribbon">
-                    ⚠️ This Site Is Under Construction - We're moving from modsquadacademy.weebly.com⚠️
+                    ⚠️ This Site Is Under Construction ⚠️
                 </div>
             </div>
         `;

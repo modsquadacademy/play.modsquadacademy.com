@@ -29,15 +29,13 @@ shared-header {
     flex-direction: column;
 }
 
-/* SCRATCH BLUE THEME TOP TOOLBAR */
 header {
-    background-color: #4D97FF; /* Iconic Scratch Blue */
+    background-color: #ffffff;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 25px 0; 
+    padding: 45px 0; 
     width: 100%;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
@@ -52,7 +50,6 @@ header {
     height: 38px;
     width: auto;
     display: block;
-    filter: brightness(0) invert(1); /* Ensures logo text stands out cleanly on Scratch Blue */
 }
 
 /* Desktop Menu Layout */
@@ -70,16 +67,14 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: #ffffff;
-    font-weight: 600;
+    color: #777777;
+    font-weight: 400;
     font-size: 15px;
-    transition: all 0.2s ease;
-    opacity: 0.9;
+    transition: color 0.2s ease;
 }
 
 nav ul li a:hover, nav ul li a.active {
-    color: #ffe600; /* Scratch Accent Yellow for Hover/Active states */
-    opacity: 1;
+    color: #0099ff;
 }
 
 #menu-toggle {
@@ -101,21 +96,21 @@ nav ul li a:hover, nav ul li a.active {
     display: block;
     width: 25px;
     height: 3px;
-    background-color: #ffffff;
+    background-color: #333333;
     border-radius: 2px;
     transition: all 0.3s ease;
 }
 
 /* Notice Ribbons */
 .construction-ribbon {
-    background: rgba(0, 0, 0, 0.4); 
+    background: rgba(255, 230, 0, 0.25); 
     backdrop-filter: blur(10px); 
     -webkit-backdrop-filter: blur(10px);
     color: #ffe600; 
     text-align: center;
-    padding: 10px 20px;
-    font-weight: 700;
-    font-size: 13px;
+    padding: 12px 20px;
+    font-weight: 600;
+    font-size: 14px;
     letter-spacing: 1px;
     text-transform: uppercase;
     border-bottom: 1px solid rgba(255, 230, 0, 0.3); 
@@ -158,8 +153,8 @@ nav ul li a:hover, nav ul li a.active {
 .display-title {
     font-size: 4.2rem;
     font-weight: 800;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    letter-spacing: 1px;         /* Restores the wide spacing */
+    text-transform: uppercase;   /* Restores all-caps */
     line-height: 1.15;
     margin-bottom: 20px;
     text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7);
@@ -192,7 +187,7 @@ nav ul li a:hover, nav ul li a.active {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: #4D97FF;
+    color: #0099ff;
     margin-bottom: 10px;
 }
 
@@ -329,13 +324,13 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .nav-tab.active {
-    background: rgba(77, 151, 255, 0.15);
-    border-color: rgba(77, 151, 255, 0.5);
-    box-shadow: 0 4px 20px rgba(77, 151, 255, 0.2);
+    background: rgba(0, 153, 255, 0.12);
+    border-color: rgba(0, 153, 255, 0.4);
+    box-shadow: 0 4px 20px rgba(0, 153, 255, 0.15);
 }
 
 .nav-tab.active h3 {
-    color: #4D97FF;
+    color: #0099ff;
 }
 
 .nav-tab.active p {
@@ -344,7 +339,7 @@ nav ul li a:hover, nav ul li a.active {
 
 /* Buttons */
 .btn-glass {
-    background: rgba(77, 151, 255, 0.3); 
+    background: rgba(0, 153, 255, 0.25); 
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     color: #ffffff;
@@ -357,16 +352,16 @@ nav ul li a:hover, nav ul li a.active {
     border-radius: 6px;
     cursor: pointer;
     text-decoration: none;
-    box-shadow: 0 4px 20px rgba(77, 151, 255, 0.25);
+    box-shadow: 0 4px 20px rgba(0, 153, 255, 0.2);
     transition: all 0.3s ease;
     display: inline-block;
 }
 
 .btn-glass:hover {
-    background: rgba(77, 151, 255, 0.55); 
+    background: rgba(0, 153, 255, 0.45); 
     border-color: rgba(255, 255, 255, 0.7);
     transform: translateY(-2px);
-    box-shadow: 0 6px 25px rgba(77, 151, 255, 0.45);
+    box-shadow: 0 6px 25px rgba(0, 153, 255, 0.4);
 }
 
 @keyframes carouselFade {
@@ -385,8 +380,9 @@ nav ul li a:hover, nav ul li a.active {
     /* Parallax Image Mapping with custom tint layer */
     background: linear-gradient(rgba(10, 10, 18, 0.2), rgba(10, 10, 18, 0.4)), url('images/Sep2026/VideoCapture_20260930-160406.jpg') no-repeat center center;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: fixed; /* Creates parallax structural depth */
     
+    /* Layout Center Alignment Anchors */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -394,21 +390,27 @@ nav ul li a:hover, nav ul li a.active {
     overflow: hidden;
 }
 
+/* Glassmorphism Centered Floating Frosted Window */
 .featured-card {
+    /* Translucent white base providing the glass effect reflection */
     background: rgba(255, 255, 255, 0.06); 
+    
+    /* Crucial Glassmorphism properties: Blurs whatever image passes behind it */
     backdrop-filter: blur(16px) saturate(120%);
     -webkit-backdrop-filter: blur(16px) saturate(120%);
     
+    /* Fine-drawn glass borders simulating 3D specular light highlights */
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-top: 1px solid rgba(255, 255, 255, 0.25);
     border-left: 1px solid rgba(255, 255, 255, 0.25);
     
-    border-radius: 16px; 
+    border-radius: 16px; /* Smooth card curvature matching dashboard cards */
     padding: 80px 60px;
     max-width: 960px;
     width: 100%;
     text-align: center;
     
+    /* Deep soft ambient occlusion shadow to pull the glass panel forward */
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4),
                 inset 0 1px 0 rgba(255, 255, 255, 0.1);
                 
@@ -418,20 +420,22 @@ nav ul li a:hover, nav ul li a.active {
     justify-content: center;
 }
 
+/* Bright Electric Tracking Header */
 .featured-label {
     font-size: 13px;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 4px;
-    color: #4D97FF;
+    color: #0099ff; /* Swapped from dull brown to your iconic theme neon blue */
     margin-bottom: 20px;
-    text-shadow: 0 2px 10px rgba(77, 151, 255, 0.3);
+    text-shadow: 0 2px 10px rgba(0, 153, 255, 0.3);
 }
 
+/* High-Contrast Crisp White Title */
 .featured-title {
     font-size: 3rem;
     font-weight: 800; 
-    color: #ffffff;
+    color: #ffffff; /* Flipped to white so it remains brilliantly readable over the glass tint */
     text-transform: uppercase;
     letter-spacing: 0.5px;
     line-height: 1.2;
@@ -440,17 +444,19 @@ nav ul li a:hover, nav ul li a.active {
     text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
+/* Soft Silver Content Description */
 .featured-text {
     font-size: 16px;
-    color: #ddddee;
+    color: #ddddee; /* Shifted to clean silver for sleek visual harmony */
     font-weight: 400;
     line-height: 1.6;
     margin-bottom: 45px;
     max-width: 650px;
 }
 
+/* True Glowing Cyan/Blue Theme Glass Button Accent */
 .btn-discover {
-    background: rgba(77, 151, 255, 0.3);
+    background: rgba(0, 153, 255, 0.25);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     color: #ffffff;
@@ -463,16 +469,16 @@ nav ul li a:hover, nav ul li a.active {
     border-radius: 8px;
     cursor: pointer;
     text-decoration: none;
-    box-shadow: 0 4px 25px rgba(77, 151, 255, 0.25);
+    box-shadow: 0 4px 25px rgba(0, 153, 255, 0.25);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     display: inline-block;
 }
 
 .btn-discover:hover {
-    background: rgba(77, 151, 255, 0.55);
+    background: rgba(0, 153, 255, 0.5);
     border-color: rgba(255, 255, 255, 0.6);
     transform: translateY(-3px);
-    box-shadow: 0 8px 30px rgba(77, 151, 255, 0.5);
+    box-shadow: 0 8px 30px rgba(0, 153, 255, 0.5);
 }
 
 /* ==========================================
@@ -487,7 +493,7 @@ nav ul li a:hover, nav ul li a.active {
     }
 
     header {
-        padding: 20px 0; 
+        padding: 25px 0; 
         justify-content: center; 
         position: relative;
     }
@@ -508,8 +514,8 @@ nav ul li a:hover, nav ul li a.active {
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: #4D97FF;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        background-color: #ffffff;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease-in-out;
@@ -533,7 +539,7 @@ nav ul li a:hover, nav ul li a.active {
         padding: 15px 0;
         width: 100%;
         font-size: 16px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        border-bottom: 1px solid #eeeeee;
     }
     
     nav ul li:last-child a {
@@ -629,6 +635,7 @@ footer {
     max-width: 300px;
 }
 
+/* Re-inverts logo colors safely over the dark footer background */
 .footer-logo img {
     height: 35px;
     width: auto;
@@ -653,7 +660,7 @@ footer {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #4D97FF;
+    color: #0099ff;
     margin-bottom: 20px;
 }
 
@@ -672,7 +679,7 @@ footer {
 }
 
 .footer-column ul li a:hover {
-    color: #4D97FF;
+    color: #0099ff;
 }
 
 .footer-bottom {
@@ -713,12 +720,13 @@ footer {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
     text-align: center;
     position: relative;
-    min-height: 380px;
+    min-height: 380px; /* Ensures layout layout stays anchored during text transitions */
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
+/* Base Slide Transitions */
 .quote-slide {
     display: none;
     opacity: 0;
@@ -736,11 +744,12 @@ footer {
     transform: translateY(0);
 }
 
+/* Large decorative theme quotation marker */
 .quote-icon {
     font-size: 5rem;
     font-family: serif;
     line-height: 1;
-    color: #4D97FF;
+    color: #0099ff;
     opacity: 0.3;
     margin-bottom: -10px;
 }
@@ -759,7 +768,7 @@ footer {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    color: #4D97FF;
+    color: #0099ff;
     margin-bottom: 4px;
 }
 
@@ -770,6 +779,7 @@ footer {
     letter-spacing: 1px;
 }
 
+/* Nav Pagination Dots */
 .quote-dots {
     display: flex;
     justify-content: center;
@@ -791,18 +801,19 @@ footer {
 }
 
 .quote-dots .dot.active {
-    background: #4D97FF;
-    box-shadow: 0 0 10px rgba(77, 151, 255, 0.6);
+    background: #0099ff;
+    box-shadow: 0 0 10px rgba(0, 153, 255, 0.6);
     transform: scale(1.2);
 }
 
+/* Small adjustments inside your mobile @media scope */
 @media (max-width: 900px) {
     .quotes-section {
         padding: 60px 24px;
     }
     .quotes-container {
         padding: 40px 25px 30px 25px;
-        min-height: 480px;
+        min-height: 480px; /* Gives long paragraphs breathing room on small screens */
     }
     .quote-text {
         font-size: 1.05rem;

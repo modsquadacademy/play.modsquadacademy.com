@@ -1,6 +1,6 @@
-/* ==========================================
+/* ==========================================================================
    Mod Squad Academy - Shared Component Engine
-   ========================================== */
+   ========================================================================== */
 
 // 1. Unified Navigation Header Component
 class SharedHeader extends HTMLElement {
@@ -25,19 +25,19 @@ class SharedHeader extends HTMLElement {
 
                     <nav>
                         <ul>
-                            <li><a href="index.html" class="nav-home">Home</a></li>
-                            <li><a href="create.html" class="nav-create">Create</a></li>
-                            <li><a href="explore.html" class="nav-explore">Explore</a></li>
-                            <li><a href="featured.html" class="nav-featured">Featured</a></li>
-                            <li><a href="library.html" class="nav-library">Asset Library</a></li>
-                            <li><a href="about.html" class="nav-about">About</a></li>
-                            <li><a href="contact.html" class="nav-contact">Contact</a></li>
+                            <li><a href="/" class="nav-home">Home</a></li>
+                            <li><a href="/create" class="nav-create">Create</a></li>
+                            <li><a href="/explore" class="nav-explore">Explore</a></li>
+                            <li><a href="/featured" class="nav-featured">Featured</a></li>
+                            <li><a href="/library" class="nav-library">Asset Library</a></li>
+                            <li><a href="/about" class="nav-about">About</a></li>
+                            <li><a href="/contact" class="nav-contact">Contact</a></li>
                         </ul>
                     </nav>
                 </header>
 
                 <div class="construction-ribbon">
-                    ⚠️ This Site Is Under Construction - We're moving from modsquadacademy.weebly.com ⚠️
+                    ⚠️ This Site Is Under Construction - We're moving from modsquadacademy.weebly.com⚠️
                 </div>
             </div>
         `;
@@ -48,6 +48,7 @@ class SharedHeader extends HTMLElement {
             const homeLink = this.querySelector('.nav-home');
             if (homeLink) homeLink.classList.add('active');
         }
+        // You can add conditions here later for create.html, explore.html, etc.
     }
 }
 
@@ -94,7 +95,7 @@ class SharedFooter extends HTMLElement {
                 
                 <div class="footer-bottom">
                     <p>Mod Squad Academy &bull; Empowering Next-Gen Creators</p>
-                    <p class="footer-credit">&copy; 2026 Mod. Squad Academy</p>
+                    <p class="footer-credit">© 2026 Mod. Squad Academy</p>
                 </div>
             </footer>
         `;

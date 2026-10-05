@@ -10,7 +10,7 @@ class SharedHeader extends HTMLElement {
                 <header>
                 
                     <div class="logo">
-                        <a href="index.html">
+                        <a href="https://modsquadacademy.com/">
                             <img src="images/logo.png" alt="MOD Logo">
                         </a>
                     </div>
@@ -25,19 +25,19 @@ class SharedHeader extends HTMLElement {
 
                     <nav>
                         <ul>
-                            <li><a href="/" class="nav-home">Home</a></li>
-                            <li><a href="/create" class="nav-create">Create</a></li>
-                            <li><a href="/explore" class="nav-explore">Explore</a></li>
-                            <li><a href="/featured" class="nav-featured">Featured</a></li>
-                            <li><a href="/library" class="nav-library">Asset Library</a></li>
-                            <li><a href="/about" class="nav-about">About</a></li>
-                            <li><a href="/contact" class="nav-contact">Contact</a></li>
+                            <li><a href="https://modsquadacademy.com/" class="nav-home">Home</a></li>
+                            <li><a href="https://modsquadacademy.com/create" class="nav-create">Create</a></li>
+                            <li><a href="https://modsquadacademy.com/explore" class="nav-explore">Explore</a></li>
+                            <li><a href="https://modsquadacademy.com/featured" class="nav-featured">Featured</a></li>
+                            <li><a href="https://modsquadacademy.com/library" class="nav-library">Asset Library</a></li>
+                            <li><a href="https://modsquadacademy.com/about" class="nav-about">About</a></li>
+                            <li><a href="https://modsquadacademy.com/contact" class="nav-contact">Contact</a></li>
                         </ul>
                     </nav>
                 </header>
 
                 <div class="construction-ribbon">
-                    ⚠️ This Site Is Under Construction - We're moving from modsquadacademy.weebly.com⚠️
+                    ⚠️ SUBDOMAIN UNDER CONSTRUCTION ⚠️
                 </div>
             </div>
         `;
@@ -48,7 +48,6 @@ class SharedHeader extends HTMLElement {
             const homeLink = this.querySelector('.nav-home');
             if (homeLink) homeLink.classList.add('active');
         }
-        // You can add conditions here later for create.html, explore.html, etc.
     }
 }
 
@@ -64,7 +63,7 @@ class SharedFooter extends HTMLElement {
                 <div class="footer-container">
                     <div class="footer-brand">
                         <div class="footer-logo">
-                            <img src="/images/logo.png" alt="MOD SQUAD ACADEMY Logo">
+                            <img src="images/logo.png" alt="MOD SQUAD ACADEMY Logo">
                         </div>
                         <p class="footer-tagline">Coding to never seen before new worlds.</p>
                     </div>
@@ -73,21 +72,21 @@ class SharedFooter extends HTMLElement {
                         <div class="footer-column">
                             <h4>Explore</h4>
                             <ul>
-                                <li><a href="/index.html">Home</a></li>
-                                <li><a href="/create">Create</a></li>
-                                <li><a href="#">Explore</a></li>
-                                <li><a href="#">Featured</a></li>
+                                <li><a href="https://modsquadacademy.com/">Home</a></li>
+                                <li><a href="https://modsquadacademy.com/create">Create</a></li>
+                                <li><a href="https://modsquadacademy.com/explore">Explore</a></li>
+                                <li><a href="https://modsquadacademy.com/featured">Featured</a></li>
                             </ul>
                         </div>
                         
                         <div class="footer-column">
                             <h4>Resources</h4>
                             <ul>
-                                <li><a href="#">Asset Library</a></li>
+                                <li><a href="https://modsquadacademy.com/library">Asset Library</a></li>
                                 <li><a href="https://scratch.mit.edu/users/ModSquadAcademy/" target="_blank" rel="noopener noreferrer">Scratch Profile</a></li>
-                                <li><a href="/about">About Us</a></li>
-                                <li><a href="/policies">Policies</a></li>
-                                <li><a href="/contact">Contact</a></li>
+                                <li><a href="https://modsquadacademy.com/about">About Us</a></li>
+                                <li><a href="https://modsquadacademy.com/policies">Policies</a></li>
+                                <li><a href="https://modsquadacademy.com/contact">Contact</a></li>
                             </ul>
                         </div>
                     </div>

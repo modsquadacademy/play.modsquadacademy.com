@@ -1,0 +1,40 @@
+# Turn on the Rewrite Engine
+RewriteEngine On
+
+# Redirect direct requests for .html files to the extension-less URL
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.html\s [NC]
+RewriteRule ^ %1 [R=301,L]
+# Redirect /index to /
+RewriteRule ^index$ / [R=301,L]
+
+# Internally map extension-less URLs to the actual .html files
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# Define 404 page
+ErrorDocument 404 /404.html
+
+# Define 504 page
+ErrorDocument 504 /504.html
+
+# Ignore the version query string for actual file requests
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)\.css$ $1.css [L,QSA]
+RewriteRule ^(.*)\.js$ $1.js [L,QSA]
+
+<FilesMatch "\.(html|js|css)$">
+    FileETag None
+    <IfModule mod_headers.c>
+        Header unset ETag
+        Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+    </IfModule>
+</FilesMatch>
+
+<Files "favicon.png">
+    Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+</Files>

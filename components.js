@@ -1,3 +1,7 @@
+/* ==========================================
+   Mod Squad Academy - Shared Component Engine
+   ========================================== */
+
 class SharedHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -5,13 +9,18 @@ class SharedHeader extends HTMLElement {
                 <header>
                     <div class="logo">
                         <a href="index.html">
-                            <img src="images/logo.png" alt="MOD Logo">
+                            <img src="images/logo.png" alt="MOD Logo" style="max-height: 38px; width: auto; display: block;">
                         </a>
                     </div>
+
                     <input type="checkbox" id="menu-toggle">
+                    
                     <label for="menu-toggle" class="hamburger-label">
-                        <span></span><span></span><span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </label>
+
                     <nav>
                         <ul>
                             <li><a href="index.html" class="nav-home">Home</a></li>
@@ -19,6 +28,7 @@ class SharedHeader extends HTMLElement {
                         </ul>
                     </nav>
                 </header>
+
                 <div class="construction-ribbon">
                     🎮 Play Subdomain - Mod Squad Academy 🎮
                 </div>
@@ -26,6 +36,7 @@ class SharedHeader extends HTMLElement {
         `;
     }
 }
+
 customElements.define('shared-header', SharedHeader);
 
 class SharedFooter extends HTMLElement {
@@ -35,11 +46,12 @@ class SharedFooter extends HTMLElement {
                 <div class="footer-container">
                     <div class="footer-brand">
                         <div class="footer-logo">
-                            <img src="images/logo.png" alt="MOD SQUAD ACADEMY Logo">
+                            <img src="images/logo.png" alt="MOD SQUAD ACADEMY Logo" style="max-height: 35px; width: auto; display: block; filter: invert(1) brightness(2);">
                         </div>
                         <p class="footer-tagline">Coding to never seen before new worlds.</p>
                     </div>
                 </div>
+                
                 <div class="footer-bottom">
                     <p>Mod Squad Academy &bull; Empowering Next-Gen Creators</p>
                     <p class="footer-credit">&copy; 2026 Mod. Squad Academy</p>
@@ -48,4 +60,5 @@ class SharedFooter extends HTMLElement {
         `;
     }
 }
+
 customElements.define('shared-footer', SharedFooter);

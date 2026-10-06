@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteBase /
+
+# Route /projects/platform/id to project.html
+RewriteRule ^projects/(.*)$ projects.html [QSA,L]

@@ -93,7 +93,7 @@ nav ul li a:hover, nav ul li a.active {
     display: block;
     width: 25px;
     height: 3px;
-    background-color: #333333;
+    background-color: #ffffff;
     border-radius: 2px;
     transition: all 0.3s ease;
 }
@@ -464,7 +464,6 @@ footer {
     max-width: 300px;
 }
 
-/* Re-inverts logo colors safely over the dark footer background */
 .footer-logo img {
     height: 35px;
     width: auto;
@@ -523,4 +522,194 @@ footer {
 
 .footer-credit {
     font-style: italic;
+}
+
+/* ==========================================
+   RESPONSIVE MOBILE STYLES (Max-Width: 900px)
+   ========================================== */
+@media (max-width: 900px) {
+
+    /* --- 1. SHARED HEADER & HAMBURGER MENU --- */
+    header {
+        padding: 20px 0;
+        position: relative;
+        justify-content: center;
+    }
+
+    .logo {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .hamburger-label {
+        display: flex;
+        right: 5%;
+    }
+
+    .hamburger-label span {
+        background-color: #ffffff;
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #0088e6;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease-in-out;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 14px 20px;
+        font-size: 16px;
+        font-weight: 600;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Checkbox Toggle Expand Rule */
+    #menu-toggle:checked ~ nav {
+        max-height: 400px;
+    }
+
+    /* Transform Hamburger to 'X' when open */
+    #menu-toggle:checked ~ .hamburger-label span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 6px);
+        background-color: #ffffff;
+    }
+
+    #menu-toggle:checked ~ .hamburger-label span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu-toggle:checked ~ .hamburger-label span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -6px);
+        background-color: #ffffff;
+    }
+
+    /* --- 2. HERO BANNER SECTION --- */
+    .display-section {
+        height: auto;
+        min-height: 520px;
+        padding: 60px 20px;
+    }
+
+    .display-content {
+        flex-direction: column;
+        justify-content: center;
+        gap: 25px;
+        padding: 0;
+    }
+
+    .banner-left, .banner-right {
+        flex: none;
+        width: 100%;
+    }
+
+    .banner-play-text {
+        font-size: 3.8rem;
+        line-height: 1;
+    }
+
+    .banner-center {
+        width: 140px;
+        height: 140px;
+        margin: 10px 0;
+    }
+
+    .rotating-hub-container {
+        width: 340px;
+        height: 340px;
+    }
+
+    .hero-favicon {
+        width: 50px;
+        height: 46px;
+    }
+
+    .banner-subtitle-container {
+        align-items: center;
+        text-align: center;
+    }
+
+    .banner-subtitle-top {
+        font-size: 1.1rem;
+    }
+
+    .banner-subtitle-main {
+        font-size: 1.5rem;
+    }
+
+    /* --- 3. CAROUSEL SECTION --- */
+    .possibilities-section {
+        padding: 50px 5%;
+    }
+
+    .section-main-title {
+        font-size: 2.1rem;
+    }
+
+    .carousel-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .carousel-display {
+        height: auto;
+        padding: 24px;
+    }
+
+    .slide-image-wrapper {
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
+    .slide-title {
+        font-size: 1.3rem;
+    }
+
+    .slide-text {
+        font-size: 14px;
+    }
+
+    .carousel-nav-column {
+        gap: 10px;
+    }
+
+    .nav-tab {
+        padding: 18px 16px;
+    }
+
+    /* --- 4. FOOTER --- */
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-links-group {
+        width: 100%;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
 }

@@ -23,7 +23,7 @@ class SharedHeader extends HTMLElement {
 
                     <nav>
                         <ul>
-                            <li><a href="index.html" class="nav-home">Home</a></li>
+                            <li><a href="/" class="nav-home">Home</a></li>
                             <li><a href="https://modsquadacademy.com/create" target="_blank">Create</a></li>
                             <li><a href="">Explore</a></li>
                             <li><a href="">Featured</a></li>

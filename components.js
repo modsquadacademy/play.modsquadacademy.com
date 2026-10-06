@@ -32,6 +32,11 @@ class SharedHeader extends HTMLElement {
                         </ul>
                     </nav>
                 </header>
+
+                <div class="construction-ribbon">
+                    ⚠️ This Subdomain Is Under Construction! ⚠️
+                </div>
+
             </div>
         `;
     }
@@ -46,15 +51,38 @@ class SharedFooter extends HTMLElement {
                 <div class="footer-container">
                     <div class="footer-brand">
                         <div class="footer-logo">
-                            <img src="images/logo.png" alt="MOD SQUAD ACADEMY Logo" style="max-height: 35px; width: auto; display: block; filter: invert(1) brightness(2);">
+                            <img src="/images/logo.png" alt="MOD SQUAD ACADEMY Logo">
                         </div>
-                        <p class="footer-tagline">Code to new worlds never seen before.</p>
+                        <p class="footer-tagline">Code to new worlds never seen before!</p>
+                    </div>
+                    
+                    <div class="footer-links-group">
+                        <div class="footer-column">
+                            <h4>Explore</h4>
+                            <ul>
+                                <li><a href="https://modsquadacademy.com">Main Site</a></li>
+                                <li><a href="/create">Create</a></li>
+                                <li><a href="#">Explore</a></li>
+                                <li><a href="#">Featured</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-column">
+                            <h4>Resources</h4>
+                            <ul>
+                                <li><a href="#">Asset Library</a></li>
+                                <li><a href="https://scratch.mit.edu/users/ModSquadAcademy/" target="_blank" rel="noopener noreferrer">Scratch Profile</a></li>
+                                <li><a href="https://modsquadacademy.com/about">About Us</a></li>
+                                <li><a href="https://modsquadacademy.com/policies">Policies</a></li>
+                                <li><a href="https://modsquadacademy.com/contact">Contact</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="footer-bottom">
                     <p>Mod Squad Academy &bull; Empowering Next-Gen Creators</p>
-                    <p class="footer-credit">&copy; 2026 Mod. Squad Academy</p>
+                    <p class="footer-credit">© 2026 Mod. Squad Academy</p>
                 </div>
             </footer>
         `;

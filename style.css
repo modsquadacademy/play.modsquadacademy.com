@@ -121,7 +121,7 @@ nav ul li a:hover, nav ul li a.active {
     position: relative;
     height: 90vh;
     min-height: 650px; 
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('images/grid.png') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('images/Grid.png') no-repeat center center/cover;
     display: flex;
     flex-direction: column;
     justify-content: center;

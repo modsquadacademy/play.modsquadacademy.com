@@ -32,8 +32,6 @@ class SharedHeader extends HTMLElement {
                         </ul>
                     </nav>
                 </header>
-
-                
             </div>
         `;
     }
@@ -50,7 +48,7 @@ class SharedFooter extends HTMLElement {
                         <div class="footer-logo">
                             <img src="images/logo.png" alt="MOD SQUAD ACADEMY Logo" style="max-height: 35px; width: auto; display: block; filter: invert(1) brightness(2);">
                         </div>
-                        <p class="footer-tagline">Coding to never seen before new worlds.</p>
+                        <p class="footer-tagline">Code to new worlds never seen before.</p>
                     </div>
                 </div>
                 

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play @ Mod Squad Academy</title>
@@ -14,58 +13,97 @@
     <!-- CSS loaded BEFORE JS components -->
     <link rel="stylesheet" href="style.css">
     <script src="components.js" defer></script>
-
-    <style>
-        .looking-for-section { padding: 60px 20px; text-align: center; }
-        
-        .carousel-outer { 
-            position: relative; max-width: 1200px; margin: 0 auto; overflow: hidden;
-            mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-            -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-        }
-
-        #looking-carousel { 
-            display: flex; gap: 20px; 
-            will-change: transform;
-            padding: 20px 0;
-            justify-content: center;
-            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .looking-card {
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px; padding: 25px; 
-            width: 85vw; max-width: 450px;
-            flex-shrink: 0;
-            display: flex; align-items: center; gap: 15px; text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .looking-card.center-active {
-            box-shadow: 0 0 40px rgba(255, 255, 255, 0.15);
-            background: rgba(255, 255, 255, 0.15);
-            transform: scale(1.05);
-        }
-
-        .looking-card img { width: 45px; height: 45px; }
-        .looking-text { text-align: left; }
-        .looking-text h3 { color: #fff; margin: 0; font-size: 1.2rem; }
-        .looking-text p { margin: 5px 0 0; font-weight: 600; font-size: 0.9rem; text-decoration: underline; }
-    </style>
 </head>
 <body>
     
     <shared-header></shared-header>
 
     <main>
+        <!-- Hero Banner Section -->
         <section class="display-section">
             <div class="display-content">
-                <img src="images/favicon.png" alt="Mod Squad Icon" class="hero-favicon">
-                <h1 class="display-title">Code to new worlds</h1>
-                <h2 class="display-subtitle">NEVER SEEN BEFORE</h2>
-                <a href="https://modsquadacademy.com/contact" class="btn-glass">Enquire Now!</a>
+                <div class="banner-left">
+                    <span class="banner-play-text">PLAY</span>
+                </div>
+
+                <div class="banner-center">
+                    <div class="rotating-hub-container">
+                        <img src="images/Mod Squad Logo Expanded Background V2.png" alt="Rotating Logo Hub" class="rotating-hub">
+                    </div>
+                    <img src="images/favicon.png" alt="Mod Squad Icon" class="hero-favicon">
+                </div>
+
+                <div class="banner-right">
+                    <div class="banner-subtitle-container">
+                        <span class="banner-subtitle-top">with</span>
+                        <h2 class="banner-subtitle-main">Mod Squad Academy</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="possibilities-section">
+            <div class="section-header">
+                <p class="section-subtitle">A Space To</p>
+                <h2 class="section-main-title">Play and Share!</h2>
+            </div>
+
+            <div class="carousel-container">
+                <div class="carousel-display">
+                    <div class="slide-content active" id="slide-1">
+                        <div class="slide-image-wrapper">
+                            <img src="images/Screenshot 2026-10-06 122819.png" alt="A list of SCratch Mods" style="--fit-type: cover;">
+                        </div>
+                        <div class="slide-info-block">
+                            <h3 class="slide-title">Supports most Scratch Mods</h3>
+                            <p class="slide-text">Share from Scratch, TurboWarp, PenguinMod, and more!</p>
+                        </div>
+                        <div>
+                            <a href="" class="btn-glass">Share a project!</a>
+                        </div>
+                    </div>
+
+                    <div class="slide-content" id="slide-2">
+                        <div class="slide-image-wrapper">
+                            <img src="images/Mod Squad Logo Expanded V2.png" alt="Mod map diagram breakdown" style="--fit-type: contain;">
+                        </div>
+                        <div class="slide-info-block">
+                            <h3 class="slide-title">Featured from the Community</h3>
+                            <p class="slide-text">Check out our favourite community projects from Scratch and its mods!</p>
+                        </div>
+                        <div>
+                            <a href="/explore" class="btn-glass">Explore</a>
+                        </div>
+                    </div>
+
+                    <div class="slide-content" id="slide-3">
+                        <div class="slide-image-wrapper">
+                            <img src="images/stocksnap-laptop-2620118_1920.jpg" alt="Lines of real code text close up" style="--fit-type: cover;">
+                        </div>
+                        <div class="slide-info-block">
+                            <h3 class="slide-title">Games form our Participants</h3>
+                            <p class="slide-text">Check out some of the games our participants made during our courses!</p>
+                        </div>
+                        <div>
+                            <a href="" class="btn-glass">Discover</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-nav-column">
+                    <div class="nav-tab active" onclick="handleTabClick(1)">
+                        <h3>Supports most Scratch Mods</h3>
+                        <p>Now you can share from Scratch, TurboWarp, Penguinmod, and more</p>
+                    </div>
+                    <div class="nav-tab" onclick="handleTabClick(2)">
+                        <h3>Featured</h3>
+                        <p>Our favourite projects from the community!</p>
+                    </div>
+                    <div class="nav-tab" onclick="handleTabClick(3)">
+                        <h3>Student Projects</h3>
+                        <p>Discover what our participants made!</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -73,29 +111,28 @@
     <shared-footer></shared-footer>
 
     <script>
-        const carousel = document.getElementById('looking-carousel');
-        function updateGlow() {
-            const cards = Array.from(document.querySelectorAll('.looking-card'));
-            cards.forEach(c => c.classList.remove('center-active'));
-            if (cards.length >= 2) cards[1].classList.add('center-active');
+        let currentSlideIndex = 1;
+        function switchSlide(slideNumber) {
+            currentSlideIndex = slideNumber;
+            document.querySelectorAll('.slide-content').forEach(slide => slide.classList.remove('active'));
+            document.querySelectorAll('.nav-tab').forEach(tab => tab.classList.remove('active'));
+            document.getElementById(`slide-${slideNumber}`).classList.add('active');
+            document.querySelectorAll('.nav-tab')[slideNumber - 1].classList.add('active');
         }
-        function rotateCarousel() {
-            const cards = Array.from(document.querySelectorAll('.looking-card'));
-            const cardWidth = cards[0].offsetWidth;
-            const gap = 20;
-            carousel.style.transition = 'transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
-            carousel.style.transform = `translateX(-${cardWidth + gap}px)`;
-            setTimeout(() => {
-                carousel.style.transition = 'none';
-                carousel.appendChild(carousel.firstElementChild);
-                carousel.style.transform = 'translateX(0)';
-                updateGlow();
-            }, 800);
+
+        function nextSlide() {
+            let nextSlideNum = currentSlideIndex + 1;
+            if (nextSlideNum > 3) nextSlideNum = 1;
+            switchSlide(nextSlideNum);
         }
-        if (carousel) {
-            setInterval(rotateCarousel, 4000);
-            updateGlow();
+
+        function handleTabClick(slideNumber) {
+            clearInterval(autoCycleTimer);
+            switchSlide(slideNumber);
+            autoCycleTimer = setInterval(nextSlide, 5000);
         }
+
+        let autoCycleTimer = setInterval(nextSlide, 5000);
     </script>
 </body>
 </html>

@@ -98,72 +98,296 @@ nav ul li a:hover, nav ul li a.active {
     transition: all 0.3s ease;
 }
 
-.construction-ribbon {
-    background: rgba(255, 230, 0, 0.25); 
-    backdrop-filter: blur(10px); 
-    -webkit-backdrop-filter: blur(10px);
-    color: #ffe600; 
-    text-align: center;
-    padding: 12px 20px;
-    font-weight: 600;
-    font-size: 14px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    border-bottom: 1px solid rgba(255, 230, 0, 0.3); 
-    width: 100%;
-}
-
 /* ==========================================
-   HERO BANNER SECTION
+   HERO BANNER SECTION & ROTATING HUB
    ========================================= */
 .display-section {
     position: relative;
     height: 90vh;
     min-height: 650px; 
-    background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.15)), url('images/space-bg.jpg') no-repeat center center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-.display-content {
-    max-width: 1100px;
-    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('images/space-bg.jpg') no-repeat center center/cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    padding: 20px;
+    overflow: hidden;
 }
 
-.hero-favicon {
-    width: 78px;
-    height: 75px;
-    margin-bottom: 5px;
+/* Foreground Banner Layout */
+.display-content {
     position: relative;
-    top: -50px;
+    z-index: 2;
+    max-width: 1400px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 0 60px;
+    gap: 60px;
+}
+
+.banner-left, .banner-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-center {
+    position: relative;
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 220px;
+}
+
+/* Expanded Rotating Hub Background Animation */
+.rotating-hub-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 640px;
+    height: 640px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.rotating-hub {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    animation: slowRotate 30s linear infinite;
+}
+
+@keyframes slowRotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.banner-play-text {
+    font-size: 6.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 0px 4px 25px rgba(0, 153, 255, 0.6);
+}
+
+/* Updated to width: 65px and height: 60px */
+.hero-favicon {
+    position: relative;
+    z-index: 2;
+    width: 65px;
+    height: 60px;
+    display: block;
+    filter: drop-shadow(0 0 20px rgba(0, 153, 255, 0.5));
+}
+
+.banner-subtitle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.banner-subtitle-top {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #cccccc;
+    margin-bottom: 4px;
+    text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.banner-subtitle-main {
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.8);
+    line-height: 1.2;
+}
+
+/* ==========================================
+   CAROUSEL INTERFACE (THE POSSIBILITIES)
+   ========================================== */
+.possibilities-section {
+    background-color: #0b0b12;
+    padding: 80px 8%;
+    width: 100%;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-subtitle {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #0099ff;
+    margin-bottom: 10px;
+}
+
+.section-main-title {
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Grid Layout */
+.carousel-container {
+    display: grid;
+    grid-template-columns: 1.6fr 0.8fr;
+    gap: 35px;
+    max-width: 1300px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+/* Left Display Card */
+.carousel-display {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    height: 580px; 
+    overflow: hidden;
+    position: relative;
+}
+
+.slide-content {
+    display: none; 
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.slide-content.active {
+    display: flex;
+    animation: carouselFade 0.4s ease-in-out forwards;
+}
+
+/* Image Container Wrapper Box */
+.slide-image-wrapper {
+    width: 100%;
+    height: 290px; 
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #14141c;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: var(--fit-type, cover); 
     display: block;
 }
 
-.display-title {
-    font-size: 4.2rem;
+.slide-info-block {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.slide-title {
+    font-size: 1.7rem;
     font-weight: 800;
-    letter-spacing: 1px;
+    margin-bottom: 10px;
     text-transform: uppercase;
-    line-height: 1.15;
+    letter-spacing: 0.5px;
+}
+
+.slide-text {
+    font-size: 15px;
+    color: #cccccc;
+    line-height: 1.5;
     margin-bottom: 20px;
-    text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7);
 }
 
-.display-subtitle {
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-bottom: 45px;
-    color: #dddddd;
-    text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.6);
+/* Right Selection Controls */
+.carousel-nav-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: space-between; 
 }
 
+.nav-tab {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 32px 20px; 
+    text-align: center; 
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.nav-tab h3 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.nav-tab p {
+    font-size: 12px;
+    color: #888888;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+/* Interactive Highlights */
+.nav-tab:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.nav-tab.active {
+    background: rgba(0, 153, 255, 0.12);
+    border-color: rgba(0, 153, 255, 0.4);
+    box-shadow: 0 4px 20px rgba(0, 153, 255, 0.15);
+}
+
+.nav-tab.active h3 {
+    color: #0099ff;
+}
+
+.nav-tab.active p {
+    color: #cccccc;
+}
+
+/* Buttons */
 .btn-glass {
     background: rgba(0, 153, 255, 0.25); 
     backdrop-filter: blur(12px);
@@ -188,6 +412,11 @@ nav ul li a:hover, nav ul li a.active {
     border-color: rgba(255, 255, 255, 0.7);
     transform: translateY(-2px);
     box-shadow: 0 6px 25px rgba(0, 153, 255, 0.4);
+}
+
+@keyframes carouselFade {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* ==========================================
@@ -245,4 +474,28 @@ footer {
 
 .footer-credit {
     font-style: italic;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1024px) {
+    .endless-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 900px) {
+    .display-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .banner-play-text {
+        font-size: 4rem;
+    }
+    .banner-subtitle-container {
+        align-items: center;
+        text-align: center;
+    }
+    .banner-subtitle-main {
+        font-size: 1.5rem;
+    }
 }
